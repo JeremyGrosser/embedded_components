@@ -118,7 +118,6 @@ package STMPE1600 is
      (This : in out STMPE1600_Expander;
       Pin  : STMPE1600_Pin_Number) return HAL.GPIO.Any_GPIO_Point;
 
-
 private
 
    use type HAL.GPIO.GPIO_Pull_Resistor;
@@ -142,7 +141,6 @@ private
       I2C_Shdn     at 0 range 6 .. 6;
       Soft_Reset   at 0 range 7 .. 7;
    end record;
-
 
    type STMPE1600_Pin is new HAL.GPIO.GPIO_Point with record
       Port : Any_STMPE1600_Expander;

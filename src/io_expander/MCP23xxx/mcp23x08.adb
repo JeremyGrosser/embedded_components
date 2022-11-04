@@ -185,7 +185,6 @@ package body MCP23x08 is
       return not Read_Bit (This, IO_DIRECTION_REG, Pin);
    end Is_Output;
 
-
    --------------------
    -- Configure_Pull --
    --------------------
@@ -307,7 +306,6 @@ package body MCP23x08 is
    begin
       return HAL.GPIO.Output;
    end Mode;
-
 
    --------------
    -- Set_Mode --

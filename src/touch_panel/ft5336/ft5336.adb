@@ -33,7 +33,6 @@ with Ada.Unchecked_Conversion;
 
 package body FT5336 is
 
-
    pragma Warnings (Off, "* is not referenced");
 
    --------------------------------------%----------------------
@@ -89,11 +88,9 @@ package body FT5336 is
    FT5336_TOUCH_POS_LSB_MASK           : constant UInt8 := 16#FF#;
    FT5336_TOUCH_POS_LSB_SHIFT          : constant UInt8 := 16#00#;
 
-
    --  Values Pn_WEIGHT related
    FT5336_TOUCH_WEIGHT_MASK            : constant UInt8 := 16#FF#;
    FT5336_TOUCH_WEIGHT_SHIFT           : constant UInt8 := 16#00#;
-
 
    --  Values related to FT5336_Pn_MISC_REG
    FT5336_TOUCH_AREA_MASK              : constant UInt8 := 2#0100_0000#;
@@ -338,7 +335,7 @@ package body FT5336 is
                                     Enabled : Boolean)
    is
       Reg_Value : UInt8 := 0;
-      Status    : Boolean with Unreferenced;
+      Status    : Boolean;
    begin
       if Enabled then
          Reg_Value := FT5336_G_MODE_INTERRUPT_TRIGGER;

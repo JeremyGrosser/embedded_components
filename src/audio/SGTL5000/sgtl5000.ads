@@ -219,7 +219,6 @@ package SGTL5000 is
    -- Audio Switch --
    ------------------
 
-
    type ADC_Source is (Microphone, Line_In);
    type DAP_Source is (ADC, I2S_In);
    type DAP_Mix_Source is (ADC, I2S_In);

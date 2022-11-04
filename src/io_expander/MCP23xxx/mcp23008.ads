@@ -32,4 +32,3 @@
 with MCP23x08.I2C;
 
 package MCP23008 renames MCP23x08.I2C;
-

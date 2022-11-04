@@ -15,7 +15,10 @@ project Embedded_Components is
    for Library_Kind use Library_Type;
 
    package Compiler is
-      for Default_Switches ("Ada") use Embedded_Components_Config.Ada_Compiler_Switches;
+      for Default_Switches ("Ada") use Embedded_Components_Config.Ada_Compiler_Switches & (
+         "-gnatyM120",  --  max line length
+         "-gnaty-B"      --  ignore (style) "and then" required
+      );
    end Compiler;
 
    package Binder is

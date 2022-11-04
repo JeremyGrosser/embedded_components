@@ -148,7 +148,6 @@ private
    FT6206_TOUCH_WEIGHT_MASK            : constant UInt8 := 16#FF#;
    FT6206_TOUCH_WEIGHT_SHIFT           : constant UInt8 := 16#00#;
 
-
    --  Values related to FT6206_Pn_MISC_REG
    FT6206_TOUCH_AREA_MASK              : constant UInt8 := 2#0100_0000#;
    FT6206_TOUCH_AREA_SHIFT             : constant UInt8 := 16#04#;

@@ -94,7 +94,6 @@ package body ST7735R.RAM_Framebuffer is
       Display.Write_Raw_Pixels (Display.Layer_Data);
    end Update_Layer;
 
-
    -------------------
    -- Update_Layers --
    -------------------

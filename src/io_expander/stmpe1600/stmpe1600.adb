@@ -252,7 +252,7 @@ package body STMPE1600 is
    is
       Pins      : aliased STMPE1600_Pins;
       BA        : aliased UInt8_Array (1 .. 2) with Address => Pins'Address;
-      Status    : Boolean with Unreferenced;
+      Status    : Boolean;
       New_State : constant Boolean := Direction = Output;
 
    begin
@@ -277,7 +277,7 @@ package body STMPE1600 is
    is
       Pins      : aliased STMPE1600_Pins;
       BA        : aliased UInt8_Array (1 .. 2) with Address => Pins'Address;
-      Status    : Boolean with Unreferenced;
+      Status    : Boolean;
 
    begin
       Read (This, STMPE1600_REG_GPDR_0, BA, Status);
@@ -295,8 +295,7 @@ package body STMPE1600 is
    is
       Pins      : aliased STMPE1600_Pins;
       BA        : aliased UInt8_Array (1 .. 2) with Address => Pins'Address;
-      Status    : Boolean with Unreferenced;
-
+      Status    : Boolean;
    begin
       Read (This, STMPE1600_REG_GPPIR_0, BA, Status);
       if Pins (Pin) = Inversion_State then

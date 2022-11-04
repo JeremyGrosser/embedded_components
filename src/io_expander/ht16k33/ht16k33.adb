@@ -51,7 +51,6 @@ package body HT16K33 is
                           Cmd  : UInt8;
                           Status : out Boolean);
 
-
    procedure Update_Setup_Reg (This : in out HT16K33_Device);
 
    --------------
@@ -175,7 +174,6 @@ package body HT16K33 is
          raise Program_Error;
       end if;
    end Set_Brightness;
-
 
    ---------------
    -- Set_Blink --

@@ -988,4 +988,3 @@ package body L3GD20 is
    end Reset;
 
 end L3GD20;
-

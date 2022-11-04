@@ -268,7 +268,6 @@ package body ST7735R is
       Write_Command (LCD, 16#28#);
    end Turn_Off;
 
-
    --------------------------
    -- Display_Inversion_On --
    --------------------------
@@ -277,7 +276,6 @@ package body ST7735R is
    begin
       Write_Command (LCD, 16#21#);
    end Display_Inversion_On;
-
 
    ---------------------------
    -- Display_Inversion_Off --
@@ -811,7 +809,6 @@ package body ST7735R is
    begin
       return Buffer.Native_Source;
    end Source;
-
 
    ---------------
    -- Set_Pixel --

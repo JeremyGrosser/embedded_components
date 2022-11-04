@@ -92,20 +92,20 @@ package PCD8544 is
 
    procedure Set_Contrast
        (This     : in out PCD8544_Device;
-        Contrast : in PCD8544_Contrast);
+        Contrast : PCD8544_Contrast);
 
    procedure Set_Bias
        (This : in out PCD8544_Device;
-        Bias : in PCD8544_Bias);
+        Bias : PCD8544_Bias);
 
    procedure Set_Temperature
        (This : in out PCD8544_Device;
-        TC   : in PCD8544_Temperature_Coefficient);
+        TC   : PCD8544_Temperature_Coefficient);
 
    procedure Set_Display_Mode
        (This   : in out PCD8544_Device;
-        Enable : in Boolean;
-        Invert : in Boolean);
+        Enable : Boolean;
+        Invert : Boolean);
 
    overriding
    function Max_Layers (This : PCD8544_Device) return Positive;
@@ -207,11 +207,11 @@ private
          DR                 : PCD8544_Display_Register;
       end record;
 
-   procedure Chip_Select (This : PCD8544_Device; Enabled : in Boolean);
+   procedure Chip_Select (This : PCD8544_Device; Enabled : Boolean);
    procedure Reset (This : in out PCD8544_Device);
-   procedure Transmit (This : PCD8544_Device; Data : in UInt8);
-   procedure Transmit (This : PCD8544_Device; Data : in UInt8_Array);
+   procedure Transmit (This : PCD8544_Device; Data : UInt8);
+   procedure Transmit (This : PCD8544_Device; Data : UInt8_Array);
    procedure Extended_Mode (This : in out PCD8544_Device);
    procedure Basic_Mode (This : in out PCD8544_Device);
-   procedure Write_Raw_Pixels (This : in out PCD8544_Device; Data : in UInt8_Array);
+   procedure Write_Raw_Pixels (This : in out PCD8544_Device; Data : UInt8_Array);
 end PCD8544;

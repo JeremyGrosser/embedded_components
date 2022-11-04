@@ -35,7 +35,7 @@ package body PCD8544 is
    --  Chip_Select  --
    -------------------
 
-   procedure Chip_Select (This : PCD8544_Device; Enabled : in Boolean)
+   procedure Chip_Select (This : PCD8544_Device; Enabled : Boolean)
    is
    begin
       if This.CS /= null then
@@ -66,7 +66,7 @@ package body PCD8544 is
    --  Transmit  --
    ----------------
 
-   procedure Transmit (This : PCD8544_Device; Data : in UInt8) is
+   procedure Transmit (This : PCD8544_Device; Data : UInt8) is
       Status : SPI_Status;
    begin
       This.Chip_Select (True);
@@ -82,7 +82,7 @@ package body PCD8544 is
    --  Transmit  --
    ----------------
 
-   procedure Transmit (This : PCD8544_Device; Data : in UInt8_Array) is
+   procedure Transmit (This : PCD8544_Device; Data : UInt8_Array) is
       Status : SPI_Status;
    begin
       This.Chip_Select (True);
@@ -124,7 +124,7 @@ package body PCD8544 is
 
    procedure Set_Contrast
      (This     : in out PCD8544_Device;
-      Contrast : in PCD8544_Contrast) is
+      Contrast : PCD8544_Contrast) is
    begin
       This.Extended_Mode;
       This.Transmit (PCD8544_CMD_SET_VOP or Contrast);
@@ -136,7 +136,7 @@ package body PCD8544 is
 
    procedure Set_Bias
      (This : in out PCD8544_Device;
-      Bias : in PCD8544_Bias) is
+      Bias : PCD8544_Bias) is
    begin
       This.Extended_Mode;
       This.Transmit (PCD8544_CMD_SET_BIAS or Bias);
@@ -148,7 +148,7 @@ package body PCD8544 is
 
    procedure Set_Temperature
      (This : in out PCD8544_Device;
-      TC   : in PCD8544_Temperature_Coefficient) is
+      TC   : PCD8544_Temperature_Coefficient) is
    begin
       This.Extended_Mode;
       This.Transmit (PCD8544_CMD_SET_TC or TC);
@@ -160,8 +160,8 @@ package body PCD8544 is
 
    procedure Set_Display_Mode
      (This   : in out PCD8544_Device;
-      Enable : in Boolean;
-      Invert : in Boolean) is
+      Enable : Boolean;
+      Invert : Boolean) is
    begin
       This.Basic_Mode;
       This.DR.Enable := Enable;

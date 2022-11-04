@@ -72,7 +72,6 @@ package body Bit_Fields is
       Bits   at 0 range 0 .. 31;
    end record;
 
-
    -------------
    -- To_Word --
    -------------

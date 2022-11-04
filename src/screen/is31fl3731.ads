@@ -96,7 +96,6 @@ package IS31FL3731 is
                              A    :        UInt3);
    --  Set global blink rate. Rate = A x 0.27s
 
-
    -- Implementation Specific --
 
    type LED_Id is range 0 .. 144;

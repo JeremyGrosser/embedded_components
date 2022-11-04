@@ -57,8 +57,7 @@ package body SGTL5000 is
                         Reg   : UInt16;
                         Value : UInt16)
    is
-      Status : I2C_Status with Unreferenced;
-
+      Status : I2C_Status;
    begin
       This.Port.Mem_Write
         (Addr          => SGTL5000_QFN20_I2C_Addr,

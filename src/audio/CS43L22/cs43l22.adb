@@ -99,7 +99,7 @@ package body CS43L22 is
 
       --  If the Speaker is enabled, set the Mono mode and volume attenuation
       --  level
-      if (Output /= Headphone) then
+      if Output /= Headphone then
          --  Set the Speaker Mono mode
          This.I2C_Write (CS43L22_REG_PLAYBACK_CTL2, 16#06#);
 

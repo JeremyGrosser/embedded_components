@@ -177,15 +177,12 @@ private
    --  mode
    REG_SYSRANGE_MODE_HISTOGRAM  : constant := 16#08#;
 
-
    REG_SYSTEM_THRESH_HIGH : constant := 16#000C#;
    REG_SYSTEM_THRESH_LOW  : constant := 16#000E#;
-
 
    REG_SYSTEM_SEQUENCE_CONFIG         : constant := 16#0001#;
    REG_SYSTEM_RANGE_CONFIG            : constant := 16#0009#;
    REG_SYSTEM_INTERMEASUREMENT_PERIOD : constant := 16#0004#;
-
 
    REG_SYSTEM_INTERRUPT_CONFIG_GPIO           : constant := 16#000A#;
    REG_SYSTEM_INTERRUPT_GPIO_DISABLED         : constant := 16#00#;

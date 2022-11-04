@@ -163,7 +163,6 @@ package body SSD1306 is
       Write_Command (This, DISPLAY_OFF);
    end Turn_Off;
 
-
    --------------------------
    -- Display_Inversion_On --
    --------------------------
@@ -172,7 +171,6 @@ package body SSD1306 is
    begin
       Write_Command (This, INVERT_DISPLAY);
    end Display_Inversion_On;
-
 
    ---------------------------
    -- Display_Inversion_Off --
